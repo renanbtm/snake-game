@@ -90,9 +90,8 @@ class Frutinha:
         y = random.randint(0, 49) * 10
 
         if (x, y) in cobrinha.corpo:
-            Frutinha.criar_posicao(cobrinha)
-        else:
-            return x, y
+            (x, y) = Frutinha.criar_posicao(cobrinha)
+        return x, y
 
     def blit(self, screen):
         screen.blit(self.textura, self.posicao)
